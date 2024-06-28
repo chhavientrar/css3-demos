@@ -1,0 +1,31 @@
+:root {
+    --grid-gap: 20px;
+    --grid-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: var(--grid-columns);
+    gap: var(--grid-gap);
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.grid-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 5px;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --grid-gap: 10px;
+    }
+
+    .grid-item {
+        font-size: 1.2em;
+    }
+}
